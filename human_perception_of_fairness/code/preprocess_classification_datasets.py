@@ -11,11 +11,11 @@ PLOT_FOLDER = "../plots/"
 #######################
 
 def save_preprocessed_classification_data(data, dataset_name):
-    pickle.dump(data, open("{}{}_clf_data.pickle".format(DATA_FOLDER, dataset_name), "w"))
+    pickle.dump(data, open("{}{}_clf_data.pickle".format(DATA_FOLDER, dataset_name), "wb"))
 
 
 def load_preprocessed_classification_data(dataset_name, show_preview = False):
-    data = pickle.load(open("{}{}_clf_data.pickle".format(DATA_FOLDER, dataset_name), "r"))
+    data = pickle.load(open("{}{}_clf_data.pickle".format(DATA_FOLDER, dataset_name), "rb"))
 
     if show_preview:
         print "* Preview of preprocessed {} data:".format(dataset_name)
